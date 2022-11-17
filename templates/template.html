@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../statics/bulma/css/bulma.css" />
+    <style>
+      ul.link-nav {
+        list-style: disc;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://jonathansoma.com">
+                <strong>Welcome to my website</strong>
+            </a>
+        </div>
+            </nav>
+    <section class="hero is-warning">
+      <div class="hero-body">
+        <p class="title">{{ title }}</p>
+        {% if subtitle %}
+        <p class="subtitle">{{ subtitle }}</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column" style="max-width: 250px !important">
+            <ul class="link-nav">
+              {% for link in nav_links %}
+              <li class="list-item"><a href="../{{link.slug}}/">{{link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="column">
+            <div class="content">{{ content }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
