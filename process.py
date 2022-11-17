@@ -26,6 +26,7 @@ class Page:
         rendered = template.render(
             title=self.title,
             content=content,
+            slug=self.slug,
             nav_links=nav_links
         )
 
