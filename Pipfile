@@ -8,6 +8,7 @@ python-frontmatter = "*"
 markdown = "*"
 jinja2 = "*"
 ghp-import = "*"
+jupyter = "*"
 
 [dev-packages]
 
