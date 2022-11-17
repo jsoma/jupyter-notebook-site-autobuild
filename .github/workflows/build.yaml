@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  scrape:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repo
